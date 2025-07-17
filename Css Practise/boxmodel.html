@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model in CSS</title>
+</head>
+<style>
+    .container {
+        width: 400px;
+        height: 300px;
+        /* your code here */
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .left {
+        background-color: #f44336;
+        /* your code here */
+        min-width: 100px;
+
+
+    }
+
+    .right {
+        background-color: #2973af;
+        /* your code here */
+
+
+    }
+
+
+    
+.modals {
+  display: grid;
+  place-items: center;
+  padding: 30px 0;
+  height: 100vh;
+}
+.modal {
+  width: 300px;
+  height: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+.modal-header {
+  background-color: #f44336;
+  height: 50px;
+}
+.modal-body {
+  background-color: #2973af;
+  height: 100%;
+}
+
+
+
+
+
+.my-checkbox input {
+  display: none;
+}
+
+.my-checkbox span::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.my-checkbox input:checked + span::before {
+  background-color: green;
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+
+    <div class="modals">
+        <div class="modal">
+            <div class="modal-header"></div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+
+    <label class="my-checkbox">
+        <input type="checkbox" />
+        <span>a checkbox</span>
+    </label>
+
+
+</body>
+
+</html>

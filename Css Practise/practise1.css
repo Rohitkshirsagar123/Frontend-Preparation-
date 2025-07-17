@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --bgcolor:green;
+}
+p{
+    color: green;
+}
+div p{
+    color: red;
+}
+#sec-p{
+    color: grey;
+}
+
+/* Box model css */
+.box{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border: 1px solid red;
+    padding: 20px;
+    background-color: yellow;
+}
+
+
+/* Css variable */
+.variablebox{
+    width: 200px;
+    height: 200px;
+    background-color: var(--bgcolor);
+}
+
+/* CSS calc */
+.p-clac{
+    color: brown;
+    /* font-size: calc(32px + 10vw); */
+}
+ul{
+    background-color: wheat;
+    padding: 20px;
+    border: 1px solid red;
+    width: 30%;
+    margin-left: 30px;
+        text-decoration: none;
+
+    
+}
+/* ul li {
+    cursor: pointer;
+    font-size: 20px;
+} */
+
+ul li:nth-child(2n+2) {
+    cursor: pointer;
+   background-color: aqua;
+}
+ul li:last-child {
+    cursor: pointer;
+   background-color: gold
+}
+
+
+
+ul li:hover {
+   color: blue;
+}
+
+#focusprac{
+    display: none;
+}
+/* pseudo selector */
+
+ul li:hover ~ #focusprac {
+  display: block;
+}
+
+/* pseudo element */
+#pseudoelem{
+    color: red;
+}
+#pseudoelem::before{
+    content: " before demo value ";
+    color: green;
+}
+
+#pseudoelem::after{
+    content: "demo value after  ";
+    color: blue;
+}
+
+
+/* attr */
+#attrdemo{
+
+    font-size: 80px;
+    margin: 20px;
+
+}
+
+#attrdemo::before{
+    content: attr(data-attr);
+    text-transform: capitalize;
+}
+
+/* attribute selector */
+ol li[data-at]{
+
+    color: red;
+}
+
+ol li[data-at="third"]{
+
+    color: blue;
+}
